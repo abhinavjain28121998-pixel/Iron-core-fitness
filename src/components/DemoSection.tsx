@@ -58,63 +58,28 @@ export default function DemoSection() {
     setError(null);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-      
       // Extract base64 data
       const base64Data = selectedImage.split(',')[1];
       const mimeType = selectedImage.split(';')[0].split(':')[1];
 
-      const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: [
-          {
-            inlineData: {
-              data: base64Data,
-              mimeType: mimeType,
-            }
-          },
-          "Analyze this food image. Provide the dish name, cuisine type, a brief appetizing description, main ingredients, estimated nutritional facts per serving, and relevant dietary tags (e.g., Vegan, Gluten-Free, High Protein)."
-        ],
-        config: {
-          responseMimeType: "application/json",
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: {
-              dishName: { type: Type.STRING, description: "Name of the dish" },
-              cuisineType: { type: Type.STRING, description: "Origin or style of cuisine" },
-              description: { type: Type.STRING, description: "A brief, appetizing description of the dish" },
-              ingredients: { 
-                type: Type.ARRAY, 
-                items: { type: Type.STRING },
-                description: "List of main ingredients visible or typical for this dish"
-              },
-              nutritionalFacts: {
-                type: Type.OBJECT,
-                properties: {
-                  calories: { type: Type.STRING, description: "Estimated calories (e.g., '450 kcal')" },
-                  protein: { type: Type.STRING, description: "Estimated protein (e.g., '20g')" },
-                  carbs: { type: Type.STRING, description: "Estimated carbohydrates (e.g., '50g')" },
-                  fat: { type: Type.STRING, description: "Estimated fat (e.g., '15g')" }
-                },
-                required: ["calories", "protein", "carbs", "fat"]
-              },
-              dietaryTags: {
-                type: Type.ARRAY,
-                items: { type: Type.STRING },
-                description: "Relevant dietary tags like Vegetarian, Keto, etc."
-              }
-            },
-            required: ["dishName", "cuisineType", "description", "ingredients", "nutritionalFacts", "dietaryTags"]
-          }
-        }
+      const response = await fetch('/api/analyze-food', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          imageBase64: base64Data,
+          mimeType: mimeType,
+        }),
       });
 
-      if (response.text) {
-        const result = JSON.parse(response.text) as FoodAnalysis;
-        setAnalysis(result);
-      } else {
-        throw new Error("No response from AI");
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => null);
+        throw new Error(errorData?.error || `Server error: ${response.status}`);
       }
+
+      const result = await response.json() as FoodAnalysis;
+      setAnalysis(result);
     } catch (err) {
       console.error("Analysis error:", err);
       setError(err instanceof Error ? err.message : "Failed to analyze image. Please try again.");
