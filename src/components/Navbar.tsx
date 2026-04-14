@@ -65,6 +65,7 @@ export default function Navbar({ user }: { user: User | null }) {
     { name: 'Diets', path: '/diets' },
     { name: 'Supplements', path: '/supplements' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Food Scanner', path: '/food-analysis' },
   ];
 
   return (

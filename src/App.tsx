@@ -15,6 +15,7 @@ const Supplements = lazy(() => import('./pages/Supplements'));
 const Profile = lazy(() => import('./pages/Profile'));
 const Blog = lazy(() => import('./pages/Blog'));
 const MuscleGroups = lazy(() => import('./pages/MuscleGroups'));
+const FoodAnalysis = lazy(() => import('./pages/FoodAnalysis'));
 
 function AnimatedRoutes({ user }: { user: User | null }) {
   const location = useLocation();
@@ -29,6 +30,7 @@ function AnimatedRoutes({ user }: { user: User | null }) {
         <Route path="/profile" element={<Profile user={user} />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<Blog />} />
+        <Route path="/food-analysis" element={<FoodAnalysis />} />
       </Routes>
     </AnimatePresence>
   );

@@ -8,7 +8,7 @@ export default function BriefingSection() {
       icon: <User className="w-6 h-6" />,
       title: "The User Perspective",
       content: (
-        <div className="space-y-4 text-gray-600 leading-relaxed">
+        <div className="space-y-4 text-gray-400 leading-relaxed">
           <p>
             The flow is designed to be frictionless and instantly rewarding. A user simply snaps a photo of their meal or uploads an existing image from their gallery. 
           </p>
@@ -25,13 +25,13 @@ export default function BriefingSection() {
       icon: <Database className="w-6 h-6" />,
       title: "Information Architecture",
       content: (
-        <div className="space-y-4 text-gray-600 leading-relaxed">
+        <div className="space-y-4 text-gray-400 leading-relaxed">
           <p>The system extracts and structures several key data points from the visual input:</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Identification:</strong> Precise dish name and broader cuisine categorization.</li>
-            <li><strong>Composition:</strong> A breakdown of visible and inferred core ingredients.</li>
-            <li><strong>Nutritional Estimation:</strong> Approximations for calories, macronutrients (protein, carbs, fat) based on standard serving sizes for the identified dish.</li>
-            <li><strong>Dietary Context:</strong> Automated tagging for common dietary restrictions (e.g., Vegan, Gluten-Free).</li>
+            <li><strong className="text-white">Identification:</strong> Precise dish name and broader cuisine categorization.</li>
+            <li><strong className="text-white">Composition:</strong> A breakdown of visible and inferred core ingredients.</li>
+            <li><strong className="text-white">Nutritional Estimation:</strong> Approximations for calories, macronutrients (protein, carbs, fat) based on standard serving sizes for the identified dish.</li>
+            <li><strong className="text-white">Dietary Context:</strong> Automated tagging for common dietary restrictions (e.g., Vegan, Gluten-Free).</li>
           </ul>
         </div>
       )
@@ -40,7 +40,7 @@ export default function BriefingSection() {
       icon: <Cpu className="w-6 h-6" />,
       title: "Underlying Technology",
       content: (
-        <div className="space-y-4 text-gray-600 leading-relaxed">
+        <div className="space-y-4 text-gray-400 leading-relaxed">
           <p>
             This feature leverages advanced Multimodal Large Language Models (specifically, Google's Gemini 3 Flash Preview). 
           </p>
@@ -57,10 +57,10 @@ export default function BriefingSection() {
       icon: <ShieldAlert className="w-6 h-6" />,
       title: "Challenges & UX Solutions",
       content: (
-        <div className="space-y-4 text-gray-600 leading-relaxed">
-          <p><strong>Accuracy of Nutrition:</strong> Visual analysis cannot perfectly determine portion size or hidden ingredients (like butter or sugar). <br/><em>Solution:</em> The UI explicitly labels nutritional data as "Estimated" and avoids presenting the numbers as absolute medical facts.</p>
-          <p><strong>Latency:</strong> Multimodal analysis takes a few seconds, which can feel long in a modern web app. <br/><em>Solution:</em> We implement engaging loading states ("Consulting the Chef...") to manage perceived wait times.</p>
-          <p><strong>Poor Image Quality:</strong> Blurry or poorly lit photos degrade analysis quality. <br/><em>Solution:</em> Future iterations could include client-side image validation or prompt the user for a clearer photo if the model's confidence score is low.</p>
+        <div className="space-y-4 text-gray-400 leading-relaxed">
+          <p><strong className="text-white">Accuracy of Nutrition:</strong> Visual analysis cannot perfectly determine portion size or hidden ingredients (like butter or sugar). <br/><em className="text-red-400">Solution:</em> The UI explicitly labels nutritional data as "Estimated" and avoids presenting the numbers as absolute medical facts.</p>
+          <p><strong className="text-white">Latency:</strong> Multimodal analysis takes a few seconds, which can feel long in a modern web app. <br/><em className="text-red-400">Solution:</em> We implement engaging loading states ("Consulting the Chef...") to manage perceived wait times.</p>
+          <p><strong className="text-white">Poor Image Quality:</strong> Blurry or poorly lit photos degrade analysis quality. <br/><em className="text-red-400">Solution:</em> Future iterations could include client-side image validation or prompt the user for a clearer photo if the model's confidence score is low.</p>
         </div>
       )
     }
@@ -75,14 +75,14 @@ export default function BriefingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="card p-8 md:p-10"
+          className="bg-zinc-900 border border-white/10 rounded-3xl p-8 md:p-10 shadow-xl"
         >
           <div className="flex items-start gap-6">
-            <div className="w-12 h-12 rounded-full bg-[#f5f5f0] flex items-center justify-center text-[#5A5A40] shrink-0 mt-1">
+            <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-red-500 shrink-0 mt-1">
               {section.icon}
             </div>
             <div>
-              <h3 className="font-serif text-2xl font-semibold mb-4">{section.title}</h3>
+              <h3 className="font-serif text-2xl font-semibold mb-4 text-white">{section.title}</h3>
               {section.content}
             </div>
           </div>
