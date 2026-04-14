@@ -7,6 +7,7 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { AnimatePresence } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 
 import Home from './pages/Home';
 const WorkoutPlans = lazy(() => import('./pages/WorkoutPlans'));
@@ -83,6 +84,7 @@ export default function App() {
             )}
           </main>
           <Footer />
+          <Analytics />
         </div>
       </Router>
     </HelmetProvider>
