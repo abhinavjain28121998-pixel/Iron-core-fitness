@@ -107,13 +107,33 @@ export default function DietPlans() {
     { id: 'intermittent-fasting', label: 'Intermittent Fasting' }
   ];
 
+  const getDynamicSEO = () => {
+    let title = "Weight Loss Diet Plans";
+    let description = "Healthy meal plans for effective weight loss. Explore our expert nutrition guides for every goal.";
+
+    if (filter.goal !== 'all') {
+      const goalLabel = goals.find(g => g.id === filter.goal)?.label;
+      title = `${goalLabel} Diet Plans`;
+      description = `Expertly crafted ${goalLabel.toLowerCase()} meal plans and nutrition guides for your fitness journey.`;
+    }
+
+    if (filter.type !== 'all') {
+      const typeLabel = types.find(t => t.id === filter.type)?.label;
+      title = `${typeLabel} ${title}`;
+    }
+
+    return { title, description };
+  };
+
+  const { title: seoTitle, description: seoDescription } = getDynamicSEO();
+
   return (
     <PageTransition>
       <div className="min-h-screen bg-black pt-12 pb-32">
         <SEO 
-          title="Weight Loss Diet Plans"
-        description="Healthy meal plans for effective weight loss. Explore our expert nutrition guides for every goal."
-        urlPath="/diets" 
+          title={seoTitle}
+          description={seoDescription}
+          urlPath="/diets" 
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Diet Plans", item: "/diets" }

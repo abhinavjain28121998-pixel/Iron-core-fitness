@@ -15,7 +15,7 @@ const muscleGroupsData = [
     level: 'Beginner / Intermediate',
     popular: true,
     icon: Dumbbell,
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80&fm=webp&fm=webp',
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Athlete performing a heavy barbell bench press',
     exercises: ['Bench Press', 'Incline Dumbbell Press', 'Decline Bench Press', 'Push-ups', 'Cable Crossovers', 'Dips', 'Dumbbell Flyes', 'Machine Chest Press', 'Pec Deck Flyes', 'Floor Press', 'Svend Press'],
     relatedPlans: ['Push/Pull/Legs Hypertrophy', 'Bodybuilder Bro Split']
@@ -27,7 +27,7 @@ const muscleGroupsData = [
     level: 'Intermediate',
     popular: true,
     icon: Activity,
-    image: 'https://images.unsplash.com/photo-1526506114861-f3c500078f4b?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing wide-grip pull-ups for back development',
     exercises: ['Pull-ups', 'Chin-ups', 'Barbell Rows', 'Dumbbell Rows', 'Lat Pulldowns', 'T-Bar Rows', 'Seated Cable Rows', 'Deadlifts', 'Straight-Arm Pulldowns', 'Inverted Rows', 'Meadows Row', 'Renegade Row'],
     relatedPlans: ['Push/Pull/Legs Hypertrophy', 'Bodybuilder Bro Split']
@@ -39,7 +39,7 @@ const muscleGroupsData = [
     level: 'Intermediate',
     popular: true,
     icon: Target,
-    image: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing overhead dumbbell shoulder presses',
     exercises: ['Overhead Press', 'Dumbbell Shoulder Press', 'Push Press', 'Lateral Raises', 'Cable Lateral Raises', 'Front Raises', 'Reverse Pec Deck', 'Face Pulls', 'Arnold Press', 'Upright Rows', 'Machine Shoulder Press'],
     relatedPlans: ['Push/Pull/Legs Hypertrophy', 'Dumbbell-Only Plan']
@@ -51,7 +51,7 @@ const muscleGroupsData = [
     level: 'Beginner',
     popular: true,
     icon: Zap,
-    image: 'https://images.unsplash.com/photo-1581009137042-c552e485697a?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Close up of bicep curls with dumbbells',
     exercises: ['Barbell Curls', 'EZ-Bar Curls', 'Dumbbell Curls', 'Hammer Curls', 'Preacher Curls', 'Incline Dumbbell Curls', 'Cable Curls', 'Concentration Curls', 'Reverse Curls', 'Zottman Curls', 'Spider Curls', 'Drag Curls'],
     relatedPlans: ['Bodybuilder Bro Split', 'Dumbbell-Only Plan']
@@ -63,7 +63,7 @@ const muscleGroupsData = [
     level: 'Beginner',
     popular: true,
     icon: Shield,
-    image: 'https://images.unsplash.com/photo-1530822847156-5df684ec5ee1?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing triceps rope pushdowns',
     exercises: ['Triceps Pushdowns', 'Rope Pushdowns', 'Skull Crushers', 'Overhead Extensions', 'Close-Grip Bench Press', 'Dips', 'Triceps Kickbacks', 'Diamond Push-ups', 'JM Press', 'Tate Press', 'Machine Triceps Extension'],
     relatedPlans: ['Push/Pull/Legs Hypertrophy', 'Bodybuilder Bro Split']
@@ -87,7 +87,7 @@ const muscleGroupsData = [
     level: 'Beginner / Advanced',
     popular: true,
     icon: Flame,
-    image: 'https://images.unsplash.com/photo-1566241142559-40e1bfc26ebc?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing a forearm plank for core strength',
     exercises: ['Crunches', 'Bicycle Crunches', 'Planks', 'Hanging Leg Raises', 'Russian Twists', 'Cable Crunches', 'Ab Wheel Rollouts', 'Dead Bugs', 'Hollow Body Holds', 'Woodchoppers', 'V-Ups', 'Mountain Climbers', 'Flutter Kicks'],
     relatedPlans: ['Fat-Loss & Conditioning', 'Calisthenics Plan']
@@ -99,7 +99,7 @@ const muscleGroupsData = [
     level: 'Intermediate / Advanced',
     popular: true,
     icon: Zap,
-    image: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing a deep barbell back squat',
     exercises: ['Back Squats', 'Front Squats', 'Goblet Squats', 'Hack Squats', 'Leg Press', 'Lunges', 'Bulgarian Split Squats', 'Step-Ups', 'Leg Extensions', 'Sissy Squats', 'Pistol Squats'],
     relatedPlans: ['Push/Pull/Legs Hypertrophy', 'Strength / Powerlifting Plan']
@@ -111,7 +111,7 @@ const muscleGroupsData = [
     level: 'Intermediate',
     popular: false,
     icon: Activity,
-    image: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing lying leg curls for hamstrings',
     exercises: ['Romanian Deadlifts', 'Stiff-Legged Deadlifts', 'Lying Leg Curls', 'Seated Leg Curls', 'Nordic Hamstring Curls', 'Good Mornings', 'Glute-Ham Raises', 'Kettlebell Swings', 'Swiss Ball Leg Curls', 'Sumo Deadlifts'],
     relatedPlans: ['Push/Pull/Legs Hypertrophy', 'Strength / Powerlifting Plan']
@@ -135,7 +135,7 @@ const muscleGroupsData = [
     level: 'Beginner',
     popular: false,
     icon: Shield,
-    image: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Close up of a person performing standing calf raises',
     exercises: ['Standing Calf Raises', 'Seated Calf Raises', 'Single-Leg Calf Raises', 'Donkey Calf Raises', 'Jump Rope', 'Toe Presses on Leg Press', 'Farmer\'s Walk on Toes', 'Box Jumps', 'Tibialis Raises'],
     relatedPlans: ['Push/Pull/Legs Hypertrophy', 'Bodybuilder Bro Split']
@@ -147,7 +147,7 @@ const muscleGroupsData = [
     level: 'Intermediate',
     popular: false,
     icon: Activity,
-    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing rear delt flyes for upper back development',
     exercises: ['Face Pulls', 'Rear Delt Flyes', 'Chest-Supported Rows', 'Band Pull-Aparts', 'Y-T-W Raises', 'Shrugs', 'Upright Rows', 'Meadows Row', 'T-Bar Rows', 'Inverted Rows'],
     relatedPlans: ['Desk-Worker Posture Correction', 'Pre-hab & Joint Armor']
@@ -159,7 +159,7 @@ const muscleGroupsData = [
     level: 'Intermediate',
     popular: false,
     icon: Shield,
-    image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing a conventional barbell deadlift',
     exercises: ['Back Extensions', 'Deadlifts', 'Good Mornings', 'Bird Dogs', 'Superman Holds', 'Reverse Hyperextensions', 'Romanian Deadlifts', 'Rack Pulls', 'Glute-Ham Raises'],
     relatedPlans: ['Strength / Powerlifting Plan', 'Desk-Worker Posture Correction']
@@ -171,7 +171,7 @@ const muscleGroupsData = [
     level: 'Intermediate',
     popular: false,
     icon: Target,
-    image: 'https://images.unsplash.com/photo-1526506114861-f3c500078f4b?auto=format&fit=crop&w=800&q=80&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=800&auto=format&fit=crop&fm=webp',
     alt: 'Person performing wide-grip lat pulldowns',
     exercises: ['Wide-Grip Pull-ups', 'Chin-ups', 'Straight-Arm Pulldowns', 'Lat Pulldowns', 'V-Bar Pulldowns', 'Dumbbell Pullovers', 'Single-Arm Cable Rows', 'Underhand Yates Row', 'Meadows Row', 'Renegade Row'],
     relatedPlans: ['Push/Pull/Legs Hypertrophy', 'Bodybuilder Bro Split']
@@ -451,17 +451,17 @@ export default function MuscleGroups() {
           <div className="mt-32 max-w-4xl mx-auto prose prose-invert max-w-none text-gray-400">
             <h2 className="text-2xl font-bold text-white mb-4">Mastering Muscle Group Exercises</h2>
             <p className="mb-4">
-              Understanding how to target specific areas of your body is the foundation of any effective training program. By focusing on distinct <strong>muscle group exercises</strong>, you can correct imbalances, enhance muscle definition, and ensure comprehensive development. Whether your goal is to build a broader back, sculpt your legs, or increase your chest strength, isolating these groups allows for precise <strong>targeted workouts</strong>.
+              Understanding how to target specific areas of your body is the foundation of any effective training program. By focusing on distinct <Link to="/muscle-groups" className="text-red-500 hover:underline">muscle group exercises</Link>, you can correct imbalances, enhance muscle definition, and ensure comprehensive development. Whether your goal is to build a broader back, sculpt your legs, or increase your chest strength, isolating these groups allows for precise <strong>targeted workouts</strong>.
             </p>
             <h3 className="text-xl font-bold text-white mb-3">The Importance of Targeted Workouts</h3>
             <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li><strong>Hypertrophy Focus:</strong> Isolating a muscle group ensures it receives the maximum stimulus required for growth, which is essential for bodybuilders and physique athletes.</li>
+              <li><strong>Hypertrophy Focus:</strong> Isolating a muscle group ensures it receives the maximum stimulus required for growth, which is essential for bodybuilders and physique athletes. Check our <Link to="/blog/the-ultimate-guide-to-progressive-overload-how-to-keep-growing" className="text-red-500 hover:underline">progressive overload guide</Link> to learn more.</li>
               <li><strong>Injury Prevention:</strong> Strengthening weak links in your kinetic chain by targeting specific, often neglected muscles (like the rear deltoids or hamstrings) can significantly reduce the risk of injury.</li>
               <li><strong>Mind-Muscle Connection:</strong> Concentrating on a single muscle group helps improve neuromuscular efficiency, allowing you to recruit more muscle fibers during each repetition.</li>
               <li><strong>Customized Programming:</strong> Knowing which exercises target which muscles allows you to build a customized split (e.g., Push/Pull/Legs or Upper/Lower) that fits your recovery capacity and goals.</li>
             </ul>
             <p>
-              Explore our comprehensive library of exercises to find the best movements for your goals. Pair these exercises with our structured <Link to="/workouts" className="text-red-500 hover:underline">workout plans</Link> for optimal results.
+              Explore our comprehensive library of exercises to find the best movements for your goals. Pair these exercises with our structured <Link to="/workouts" className="text-red-500 hover:underline">workout plans</Link> or dial in your nutrition with our <Link to="/diets" className="text-red-500 hover:underline">diet plans</Link> for optimal results.
             </p>
           </div>
         </div>

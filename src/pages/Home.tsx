@@ -69,11 +69,11 @@ export default function Home() {
         <section className="relative min-h-[90vh] flex items-center pt-20">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=60&w=1400&auto=format&fit=crop&fm=webp" 
-              srcSet="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=60&w=800&auto=format&fit=crop&fm=webp 800w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=60&w=1400&auto=format&fit=crop&fm=webp 1400w"
+              src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=60&w=1400&auto=format&fit=crop&fm=webp" 
+              srcSet="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=60&w=800&auto=format&fit=crop&fm=webp 800w, https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=60&w=1400&auto=format&fit=crop&fm=webp 1400w"
               sizes="100vw"
-              alt="Gym Hero" 
-              className="w-full h-full object-cover opacity-60"
+              alt="Elite Gym Training" 
+              className="w-full h-full object-cover opacity-50"
               referrerPolicy="no-referrer"
               fetchPriority="high"
               width="1400"
@@ -215,9 +215,9 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: 'Muscle Gain', desc: 'Hypertrophy focused splits for maximum size.', icon: Trophy, img: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=60&w=600&auto=format&fit=crop&fm=webp', link: '/workouts' },
+                { title: 'Muscle Gain', desc: 'Hypertrophy focused splits for maximum size.', icon: Trophy, img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=60&w=600&auto=format&fit=crop&fm=webp', link: '/workouts' },
                 { title: 'Fat Loss', desc: 'High intensity programs to shred body fat.', icon: Zap, img: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=60&w=600&auto=format&fit=crop&fm=webp', link: '/workouts' },
-                { title: 'Diet Plans', desc: 'Expert nutrition guides for every goal.', icon: Users, img: 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=60&w=600&auto=format&fit=crop&fm=webp', link: '/diets' }
+                { title: 'Diet Plans', icon: Users, desc: 'Expert nutrition guides for every goal.', img: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=60&w=600&auto=format&fit=crop&fm=webp', link: '/diets' }
               ].map((program, i) => (
                 <motion.div 
                   key={i}
@@ -399,11 +399,11 @@ export default function Home() {
             </p>
             <h3 className="text-2xl font-bold text-white mb-4">Expert Diet Plans</h3>
             <p className="mb-4">
-              Training is only half the equation. To truly transform your body, you need proper nutrition. Explore our comprehensive <strong>diet plans</strong>, including specialized options like our <strong>7-day vegetarian diet plan for muscle gain</strong>. We provide clear guidance on macronutrient distribution, meal timing, and healthy recipes to ensure you are fueling your body optimally for both performance and recovery.
+              Training is only half the equation. To truly transform your body, you need proper nutrition. Explore our comprehensive <Link to="/diets" className="text-red-500 hover:underline">diet plans</Link>, including specialized options like our <strong>7-day vegetarian diet plan for muscle gain</strong>. We provide clear guidance on macronutrient distribution, meal timing, and healthy recipes to ensure you are fueling your body optimally for both performance and recovery.
             </p>
             <h3 className="text-2xl font-bold text-white mb-4">Targeted Muscle Group Exercises</h3>
             <p className="mb-6">
-              Understanding biomechanics is key to preventing injury and maximizing hypertrophy. Dive into our detailed breakdown of <strong>muscle group exercises</strong> to learn how to effectively target your chest, back, legs, shoulders, and arms. Each exercise comes with clear instructions, proper form cues, and visual demonstrations to ensure you are getting the most out of every rep.
+              Understanding biomechanics is key to preventing injury and maximizing hypertrophy. Dive into our detailed breakdown of <Link to="/muscle-groups" className="text-red-500 hover:underline">muscle group exercises</Link> to learn how to effectively target your chest, back, legs, shoulders, and arms. Each exercise comes with clear instructions, proper form cues, and visual demonstrations to ensure you are getting the most out of every rep.
             </p>
             <p>
               Start your journey today by exploring our <Link to="/workouts" className="text-red-500 hover:underline">workout library</Link> or dialing in your nutrition with our <Link to="/diets" className="text-red-500 hover:underline">diet guides</Link>.
@@ -415,10 +415,10 @@ export default function Home() {
         <section className="py-32 relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=60&w=1400&auto=format&fit=crop&fm=webp" 
-              srcSet="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=60&w=600&auto=format&fit=crop&fm=webp 600w, https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=60&w=1400&auto=format&fit=crop&fm=webp 1400w"
+              src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=1400&auto=format&fit=crop&fm=webp" 
+              srcSet="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=600&auto=format&fit=crop&fm=webp 600w, https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=60&w=1400&auto=format&fit=crop&fm=webp 1400w"
               sizes="100vw"
-              alt="CTA BG" 
+              alt="Commit to Fitness" 
               className="w-full h-full object-cover opacity-20"
               referrerPolicy="no-referrer"
               loading="lazy"

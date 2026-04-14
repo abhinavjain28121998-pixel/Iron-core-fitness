@@ -107,13 +107,38 @@ export default function WorkoutPlans() {
     doc.save(`${plan.title.toLowerCase().replace(/\s+/g, '-')}-workout-plan.pdf`);
   };
 
+  const getDynamicSEO = () => {
+    let title = "Elite Gym Workout Plans";
+    let description = "Scientifically designed hypertrophy training programs and strength routines for maximum results.";
+
+    if (filter.goal !== 'all') {
+      const goalLabel = goals.find(g => g.id === filter.goal)?.label;
+      title = `${goalLabel} Workout Plans`;
+      description = `Achieve your ${goalLabel.toLowerCase()} goals with our tailored workout plans and training programs.`;
+    }
+
+    if (filter.level !== 'all') {
+      const levelLabel = levels.find(l => l.id === filter.level)?.label;
+      title = `${levelLabel} ${title}`;
+    }
+
+    if (filter.preference !== 'all') {
+      const prefLabel = preferences.find(p => p.id === filter.preference)?.label;
+      title = `${title} (${prefLabel})`;
+    }
+
+    return { title, description };
+  };
+
+  const { title: seoTitle, description: seoDescription } = getDynamicSEO();
+
   return (
     <PageTransition>
       <div className="min-h-screen bg-black pt-12 pb-32">
         <SEO 
-          title="Muscle Gain Workout Plans"
-        description="Achieve muscle growth with our tailored workout plans. Explore scientifically designed training programs for every goal."
-        urlPath="/workouts" 
+          title={seoTitle}
+          description={seoDescription}
+          urlPath="/workouts" 
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Workouts", item: "/workouts" }
