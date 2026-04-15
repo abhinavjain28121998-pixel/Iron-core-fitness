@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { User, Database, Cpu, ShieldAlert } from 'lucide-react';
+import { User, Database, Cpu, ShieldAlert, Search } from 'lucide-react';
 
 export default function BriefingSection() {
   const sections = [
@@ -10,57 +10,57 @@ export default function BriefingSection() {
       content: (
         <div className="space-y-4 text-gray-400 leading-relaxed">
           <p>
-            The flow is designed to be frictionless and instantly rewarding. A user simply snaps a photo of their meal or uploads an existing image from their gallery. 
+            The redesigned interface introduces an <strong className="text-white">Ingredient-First</strong> workflow. Users can search for basic food items like paneer, ghee, or bread and add them to a virtual "plate," creating a comprehensive record of their entire meal from its core components.
           </p>
           <p>
-            Within seconds, the interface transforms from a simple upload dropzone into a rich, magazine-style layout detailing the culinary profile of their food. There are no forms to fill out or complex settings to configure—the visual input is the only requirement.
+            Each added ingredient features a dynamic weight adjustment tool. By entering the weight in grams, users can precisely control the portion size for every component, moving beyond generic meal estimates to personalized, ingredient-level tracking.
           </p>
           <p>
-            This creates a "magic moment" where opaque information (like hidden calories or complex ingredients) is made transparent and accessible through a single, intuitive action.
+            The interface provides real-time feedback, updating total nutritional values instantly as ingredients are added or weights are modified, creating a highly interactive and informative planning experience.
           </p>
         </div>
       )
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Information Architecture",
+      title: "Calculation Logic",
       content: (
         <div className="space-y-4 text-gray-400 leading-relaxed">
-          <p>The system extracts and structures several key data points from the visual input:</p>
+          <p>The system employs a deterministic calculation engine to ensure accuracy:</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong className="text-white">Identification:</strong> Precise dish name and broader cuisine categorization.</li>
-            <li><strong className="text-white">Composition:</strong> A breakdown of visible and inferred core ingredients.</li>
-            <li><strong className="text-white">Nutritional Estimation:</strong> Approximations for calories, macronutrients (protein, carbs, fat) based on standard serving sizes for the identified dish.</li>
-            <li><strong className="text-white">Dietary Context:</strong> Automated tagging for common dietary restrictions (e.g., Vegan, Gluten-Free).</li>
+            <li><strong className="text-white">Base Values:</strong> Every ingredient in the database is indexed with nutritional values (Calories, Protein, Carbs, Fat) per 100g.</li>
+            <li><strong className="text-white">Scaling Factor:</strong> When a user sets a weight (e.g., 250g), the system calculates a scaling factor (2.5x) and applies it to all base nutrients.</li>
+            <li><strong className="text-white">Aggregation:</strong> The system sums the scaled values across all ingredients in the meal to provide a unified "Meal Summary."</li>
+            <li><strong className="text-white">Raw Data:</strong> By focusing on raw ingredients, we eliminate the variability of restaurant recipes, providing a more reliable "source of truth."</li>
           </ul>
         </div>
       )
     },
     {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Underlying Technology",
+      icon: <Search className="w-6 h-6" />,
+      title: "Search Technology",
       content: (
         <div className="space-y-4 text-gray-400 leading-relaxed">
           <p>
-            This feature leverages advanced Multimodal Large Language Models (specifically, Google's Gemini 3 Flash Preview). 
+            This feature leverages a <strong className="text-white">High-Performance Search Engine</strong> that queries a curated culinary database in real-time.
           </p>
           <p>
-            Instead of relying on traditional, narrow computer vision models that only classify images into pre-defined categories, the multimodal LLM processes the image alongside a structured prompt. This allows it to not only identify the food but reason about its composition and nutritional profile in a single API call.
+            By moving away from generative AI, we ensure <strong className="text-red-500">100% Deterministic Results</strong>. Every time a user searches for a specific dish, they receive the same verified data, eliminating the "hallucinations" or inconsistencies often found in LLM-based visual analysis.
           </p>
           <p>
-            The application enforces a strict JSON schema on the model's output, ensuring the unstructured visual data is reliably converted into a structured, predictable format that the frontend can confidently render.
+            The application uses fuzzy matching and keyword indexing to ensure users can find what they're looking for even with partial names or dietary preferences.
           </p>
         </div>
       )
     },
     {
       icon: <ShieldAlert className="w-6 h-6" />,
-      title: "Challenges & UX Solutions",
+      title: "Challenges & Solutions",
       content: (
         <div className="space-y-4 text-gray-400 leading-relaxed">
-          <p><strong className="text-white">Accuracy of Nutrition:</strong> Visual analysis cannot perfectly determine portion size or hidden ingredients (like butter or sugar). <br/><em className="text-red-400">Solution:</em> The UI explicitly labels nutritional data as "Estimated" and avoids presenting the numbers as absolute medical facts.</p>
-          <p><strong className="text-white">Latency:</strong> Multimodal analysis takes a few seconds, which can feel long in a modern web app. <br/><em className="text-red-400">Solution:</em> We implement engaging loading states ("Consulting the Chef...") to manage perceived wait times.</p>
-          <p><strong className="text-white">Poor Image Quality:</strong> Blurry or poorly lit photos degrade analysis quality. <br/><em className="text-red-400">Solution:</em> Future iterations could include client-side image validation or prompt the user for a clearer photo if the model's confidence score is low.</p>
+          <p><strong className="text-white">Database Coverage:</strong> No database can contain every dish in the world. <br/><em className="text-red-400">Solution:</em> We focus on a robust set of common, high-impact foods and provide clear, generalized profiles that cover the majority of daily tracking needs.</p>
+          <p><strong className="text-white">Data Maintenance:</strong> Nutritional standards can evolve. <br/><em className="text-red-400">Solution:</em> Our database is manually curated and periodically updated to reflect the latest nutritional guidelines and culinary trends.</p>
+          <p><strong className="text-white">User Input:</strong> Users might not know the exact name of a dish. <br/><em className="text-red-400">Solution:</em> We implement smart suggestions and category-based filtering to guide users to the correct entry.</p>
         </div>
       )
     }

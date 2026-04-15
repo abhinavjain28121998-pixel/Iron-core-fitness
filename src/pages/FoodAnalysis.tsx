@@ -23,7 +23,7 @@ export default function FoodAnalysis() {
             <span className="italic text-red-500">knowledge.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-md mb-10 leading-relaxed font-light">
-            Upload a photo of any dish and instantly receive comprehensive culinary insights, from ingredients to nutritional facts.
+            Build your plate by adding basic ingredients like paneer, bread, and ghee. Adjust portions for precise nutritional tracking.
           </p>
           <div className="flex gap-4">
             <button 
@@ -89,8 +89,8 @@ export default function FoodAnalysis() {
       <section id="demo" className="py-24 bg-zinc-950 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl mb-4">Experience the Magic</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Upload a photo of your meal and let our AI analyze it in seconds.</p>
+            <h2 className="font-serif text-4xl md:text-5xl mb-4">Meal Builder</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Add multiple items and adjust weights to calculate your meal's total nutritional profile.</p>
           </div>
           <DemoSection />
         </div>
