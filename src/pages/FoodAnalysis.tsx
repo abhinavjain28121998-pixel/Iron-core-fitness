@@ -3,10 +3,20 @@ import { motion } from 'motion/react';
 import { Camera, Utensils, Info, ArrowRight, Leaf, Flame, Clock } from 'lucide-react';
 import DemoSection from '../components/DemoSection';
 import BriefingSection from '../components/BriefingSection';
+import { SEO } from '../components/SEO';
 
 export default function FoodAnalysis() {
   return (
     <div className="w-full bg-black text-white selection:bg-red-600 selection:text-white">
+      <SEO 
+        title="Food Analysis & Meal Builder"
+        description="Build your plate by adding basic ingredients like paneer, bread, and ghee. Adjust portions for precise nutritional tracking."
+        urlPath="/food-analysis"
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Food Analysis", item: "/food-analysis" }
+        ]}
+      />
       {/* Hero Section */}
       <section className="px-8 py-12 md:py-24 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center overflow-hidden">
         <motion.div 

@@ -10,7 +10,7 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-export const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://ais-dev-4moucafu2hzsflyibb74ox-756170678377.asia-southeast1.run.app';
+export const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://ais-pre-4moucafu2hzsflyibb74ox-756170678377.asia-southeast1.run.app';
 
 export const SEO: React.FC<SEOProps> = ({ 
   title = "Iron Core: Elite Gym Workout & Macronutrient Diet Plans", 
