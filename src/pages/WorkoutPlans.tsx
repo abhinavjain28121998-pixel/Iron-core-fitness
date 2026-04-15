@@ -359,14 +359,14 @@ export default function WorkoutPlans() {
           <div className="prose prose-invert max-w-none text-gray-400">
             <h2 className="text-2xl font-bold text-white mb-4">Why Follow a Structured Workout Plan?</h2>
             <p className="mb-4">
-              Whether you are looking for a <strong>weight loss workout plan</strong> or a <strong>gym workout plan for muscle gain</strong>, following a structured routine is the key to long-term success. Randomly selecting exercises each time you visit the gym often leads to plateaus and muscular imbalances. A well-designed <strong>workout plan for beginners</strong> or advanced lifters ensures progressive overload, which is the gradual increase of stress placed upon the body during exercise training.
+              Whether you are looking for a <strong>weight loss workout plan</strong> or a <strong>gym workout plan for muscle gain</strong>, following a structured routine is the key to long-term success. Randomly selecting exercises each time you visit the gym often leads to plateaus and muscular imbalances. A well-designed <strong>workout plan for beginners</strong> or advanced lifters ensures <strong>progressive overload</strong>, which is the gradual increase of stress placed upon the body during exercise training.
             </p>
             <h3 className="text-xl font-bold text-white mb-3">Benefits of Our Fitness Plans</h3>
             <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li><strong>Targeted Muscle Gain:</strong> Our hypertrophy and strength plans are optimized to build lean muscle mass effectively.</li>
-              <li><strong>Efficient Fat Loss:</strong> Combine resistance training with conditioning in our <strong>weight loss workout plans</strong> to burn calories while preserving muscle.</li>
-              <li><strong>Flexibility:</strong> Choose between gym-based routines or a convenient <strong>home workout plan</strong> that requires minimal equipment.</li>
-              <li><strong>Expert Guidance:</strong> Each plan includes detailed exercise instructions, sets, reps, and rest periods to remove the guesswork from your training.</li>
+              <li><strong>Targeted Muscle Gain:</strong> Our <strong>hypertrophy training</strong> and strength plans are optimized to build lean muscle mass effectively using scientifically-backed splits.</li>
+              <li><strong>Efficient Fat Loss:</strong> Combine resistance training with conditioning in our <strong>weight loss workout plans</strong> to burn calories while preserving muscle through a <strong>caloric deficit</strong>.</li>
+              <li><strong>Flexibility:</strong> Choose between gym-based routines or a convenient <strong>home workout plan</strong> that requires minimal equipment for effective <strong>strength and conditioning</strong>.</li>
+              <li><strong>Expert Guidance:</strong> Each plan includes detailed exercise instructions, sets, reps, and rest periods to remove the guesswork from your <strong>body transformation</strong> journey.</li>
             </ul>
             <p>
               To maximize your results, we highly recommend pairing your chosen routine with one of our expert-curated <Link to="/diets" className="text-red-500 hover:underline">diet plans</Link>. Nutrition plays a crucial role in recovery and performance, whether your goal is to build muscle or lose fat.

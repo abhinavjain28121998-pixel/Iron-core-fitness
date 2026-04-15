@@ -17,4 +17,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://iron-core-neon.vercel.app/sitemap.xml
+Sitemap: https://ais-dev-4moucafu2hzsflyibb74ox-756170678377.asia-southeast1.run.app/sitemap.xml

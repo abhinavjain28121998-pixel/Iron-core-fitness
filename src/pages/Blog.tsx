@@ -2,7 +2,7 @@ import { Calendar, User as UserIcon, ArrowRight, Search, Zap, Clock, Flame, X } 
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { blogPosts } from '../data';
 import { useState, useEffect } from 'react';
-import { SEO } from '../components/SEO';
+import { SEO, baseUrl } from '../components/SEO';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { PageTransition } from '../components/PageTransition';
@@ -68,7 +68,7 @@ export default function Blog() {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": selectedPost.title,
-            "url": `https://iron-core-neon.vercel.app/blog/${selectedPost.slug}`,
+            "url": `${baseUrl}/blog/${selectedPost.slug}`,
             "description": selectedPost.seoDescription || getCleanDescription(selectedPost.content),
             "image": selectedPost.image,
             "datePublished": selectedPost.date,
@@ -92,11 +92,11 @@ export default function Blog() {
             "@type": "Blog",
             "name": "Fitness Insights Blog",
             "description": "Stay informed with the latest tips on training, nutrition, and recovery from our team of experts.",
-            "url": "https://iron-core-neon.vercel.app/blog",
+            "url": `${baseUrl}/blog`,
             "blogPost": blogPosts.map(post => ({
               "@type": "BlogPosting",
               "headline": post.title,
-              "url": `https://iron-core-neon.vercel.app/blog/${post.slug}`,
+              "url": `${baseUrl}/blog/${post.slug}`,
               "description": post.seoDescription || getCleanDescription(post.content),
               "image": post.image,
               "datePublished": post.date,
@@ -240,14 +240,14 @@ export default function Blog() {
         <div className="max-w-4xl mx-auto px-6 prose prose-invert max-w-none text-gray-400">
           <h2 className="text-2xl font-bold text-white mb-4">Your Source for Fitness Tips and Workout Advice</h2>
           <p className="mb-4">
-            Navigating the world of fitness can be overwhelming with the constant influx of new information. Our blog is dedicated to providing you with evidence-based <strong>fitness tips</strong>, practical <strong>workout advice</strong>, and actionable <strong>nutrition guides</strong> to help you cut through the noise and achieve your goals.
+            Navigating the world of fitness can be overwhelming with the constant influx of new information. Our blog is dedicated to providing you with evidence-based <strong>fitness tips</strong>, practical <strong>workout advice</strong>, and actionable <strong>nutrition guides</strong> to help you cut through the noise and achieve your <strong>body transformation</strong> goals.
           </p>
           <h3 className="text-xl font-bold text-white mb-3">What You Will Find Here</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li><strong>Training Strategies:</strong> Learn how to optimize your time in the gym with advanced techniques like drop sets, supersets, and proper periodization.</li>
-            <li><strong>Nutritional Insights:</strong> Discover how to fuel your body for performance and recovery, including deep dives into macronutrients and supplement timing.</li>
-            <li><strong>Recovery Protocols:</strong> Understand the importance of sleep, hydration, and active recovery in maximizing your gains and preventing injury.</li>
-            <li><strong>Mindset & Motivation:</strong> Build the mental resilience needed to stay consistent and push past your limits.</li>
+            <li><strong>Training Strategies:</strong> Learn how to optimize your time in the gym with advanced techniques like <strong>progressive overload</strong>, drop sets, supersets, and proper periodization.</li>
+            <li><strong>Nutritional Insights:</strong> Discover how to fuel your body for performance and recovery, including deep dives into <strong>macronutrient-focused</strong> eating and supplement timing.</li>
+            <li><strong>Recovery Protocols:</strong> Understand the importance of sleep, hydration, and active recovery in maximizing your <strong>hypertrophy</strong> gains and preventing injury.</li>
+            <li><strong>Mindset & Motivation:</strong> Build the mental resilience needed to stay consistent and push past your limits in your <strong>strength and conditioning</strong> journey.</li>
           </ul>
           <p>
             Stay updated with the latest trends and scientific findings in the fitness industry. For structured guidance, be sure to check out our comprehensive <Link to="/workouts" className="text-red-500 hover:underline">workout plans</Link> and <Link to="/diets" className="text-red-500 hover:underline">diet plans</Link>.

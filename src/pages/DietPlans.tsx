@@ -392,14 +392,14 @@ export default function DietPlans() {
           <div className="prose prose-invert max-w-none text-gray-400">
             <h2 className="text-2xl font-bold text-white mb-4">The Importance of a Structured Diet Plan</h2>
             <p className="mb-4">
-              Achieving your fitness goals requires more than just training; it demands proper nutrition. Whether you are following a <strong>muscle gain diet plan</strong> or seeking a sustainable <strong>weight loss diet plan</strong>, consistency and macronutrient balance are key. A well-structured diet provides the necessary fuel for intense workouts and the building blocks for recovery and muscle growth.
+              Achieving your fitness goals requires more than just training; it demands proper nutrition. Whether you are following a <strong>muscle gain diet plan</strong> or seeking a sustainable <strong>weight loss diet plan</strong>, consistency and <strong>macronutrient balance</strong> are key. A well-structured diet provides the necessary fuel for intense workouts and the building blocks for recovery and muscle growth.
             </p>
             <h3 className="text-xl font-bold text-white mb-3">Benefits of Our Nutrition Guides</h3>
             <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li><strong>Optimized Muscle Growth:</strong> Our <strong>muscle gain diet plans</strong> are designed with the optimal protein-to-carb ratio to support hypertrophy and strength gains.</li>
-              <li><strong>Plant-Based Power:</strong> We offer comprehensive options like our <strong>7-day vegetarian diet plan for muscle gain</strong>, ensuring you get complete proteins from plant sources.</li>
-              <li><strong>Sustainable Fat Loss:</strong> Our weight loss plans focus on nutrient-dense foods that keep you satiated while maintaining a caloric deficit.</li>
-              <li><strong>Customizable Meals:</strong> Easily swap meals based on your preferences or dietary restrictions without compromising your goals.</li>
+              <li><strong>Optimized Muscle Growth:</strong> Our <strong>muscle gain diet plans</strong> are designed with the optimal protein-to-carb ratio to support <strong>hypertrophy</strong> and strength gains.</li>
+              <li><strong>Plant-Based Power:</strong> We offer comprehensive options like our <strong>7-day vegetarian diet plan for muscle gain</strong>, ensuring you get complete proteins from plant sources for effective <strong>body transformation</strong>.</li>
+              <li><strong>Sustainable Fat Loss:</strong> Our weight loss plans focus on nutrient-dense foods that keep you satiated while maintaining a <strong>caloric deficit</strong>.</li>
+              <li><strong>Customizable Meals:</strong> Easily swap meals based on your preferences or dietary restrictions without compromising your <strong>macronutrient-focused</strong> goals.</li>
             </ul>
             <p>
               For the best results, combine these nutrition strategies with our expertly designed <Link to="/workouts" className="text-red-500 hover:underline">workout plans</Link>. Proper fueling combined with progressive resistance training is the ultimate formula for transforming your physique.

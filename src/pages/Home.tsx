@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle2, Play, Users, Trophy, Zap, ChevronDown, Calend
 import { Link } from 'react-router-dom';
 import { testimonials, blogPosts } from '../data';
 import { useState } from 'react';
-import { SEO } from '../components/SEO';
+import { SEO, baseUrl } from '../components/SEO';
 import { PageTransition } from '../components/PageTransition';
 import { motion } from 'motion/react';
 
@@ -30,24 +30,24 @@ export default function Home() {
             "@graph": [
               {
                 "@type": "Organization",
-                "@id": "https://iron-core-neon.vercel.app/#organization",
+                "@id": `${baseUrl}/#organization`,
                 "name": "Iron Core",
-                "url": "https://iron-core-neon.vercel.app",
+                "url": baseUrl,
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://iron-core-neon.vercel.app/logo.png"
+                  "url": `${baseUrl}/logo.png`
                 },
                 "description": "The ultimate fitness platform for those who demand more. Personalized workouts, expert nutrition, and a community of warriors."
               },
               {
                 "@type": "WebSite",
-                "@id": "https://iron-core-neon.vercel.app/#website",
-                "url": "https://iron-core-neon.vercel.app",
+                "@id": `${baseUrl}/#website`,
+                "url": baseUrl,
                 "name": "Iron Core",
-                "publisher": { "@id": "https://iron-core-neon.vercel.app/#organization" },
+                "publisher": { "@id": `${baseUrl}/#organization` },
                 "potentialAction": {
                   "@type": "SearchAction",
-                  "target": "https://iron-core-neon.vercel.app/workouts?q={search_term_string}",
+                  "target": `${baseUrl}/workouts?q={search_term_string}`,
                   "query-input": "required name=search_term_string"
                 }
               },
