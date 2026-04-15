@@ -1221,5 +1221,525 @@ export const foodDatabase: FoodItem[] = [
       fat: "0.1g"
     },
     dietaryTags: ["Vegetarian", "Gluten-Free"]
+  },
+  {
+    dishName: "Dates (Medjool)",
+    cuisineType: "Dry Fruits",
+    description: "Sweet, chewy dried fruit rich in natural sugars and fiber.",
+    ingredients: ["Dates"],
+    nutritionalFacts: {
+      calories: "277 kcal",
+      protein: "1.8g",
+      carbs: "75g",
+      fat: "0.2g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo"]
+  },
+  {
+    dishName: "Raisins",
+    cuisineType: "Dry Fruits",
+    description: "Dried grapes, sweet and packed with energy.",
+    ingredients: ["Grapes"],
+    nutritionalFacts: {
+      calories: "299 kcal",
+      protein: "3.1g",
+      carbs: "79g",
+      fat: "0.5g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo"]
+  },
+  {
+    dishName: "Dried Apricots",
+    cuisineType: "Dry Fruits",
+    description: "Dehydrated apricots, high in vitamin A and potassium.",
+    ingredients: ["Apricots"],
+    nutritionalFacts: {
+      calories: "241 kcal",
+      protein: "3.4g",
+      carbs: "63g",
+      fat: "0.5g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo"]
+  },
+  {
+    dishName: "Dried Figs",
+    cuisineType: "Dry Fruits",
+    description: "Sweet, chewy dried figs with edible seeds.",
+    ingredients: ["Figs"],
+    nutritionalFacts: {
+      calories: "249 kcal",
+      protein: "3.3g",
+      carbs: "64g",
+      fat: "0.9g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo", "High Fiber"]
+  },
+  {
+    dishName: "Prunes",
+    cuisineType: "Dry Fruits",
+    description: "Dried plums, known for their digestive benefits.",
+    ingredients: ["Plums"],
+    nutritionalFacts: {
+      calories: "240 kcal",
+      protein: "2.2g",
+      carbs: "64g",
+      fat: "0.4g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo", "High Fiber"]
+  },
+  {
+    dishName: "Chia Seeds",
+    cuisineType: "Seeds",
+    description: "Tiny black seeds packed with Omega-3s and fiber.",
+    ingredients: ["Chia Seeds"],
+    nutritionalFacts: {
+      calories: "486 kcal",
+      protein: "17g",
+      carbs: "42g",
+      fat: "31g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo", "High Fiber"]
+  },
+  {
+    dishName: "Flaxseeds",
+    cuisineType: "Seeds",
+    description: "Nutty seeds rich in alpha-linolenic acid (ALA).",
+    ingredients: ["Flaxseeds"],
+    nutritionalFacts: {
+      calories: "534 kcal",
+      protein: "18g",
+      carbs: "29g",
+      fat: "42g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo", "High Fiber"]
+  },
+  {
+    dishName: "Pumpkin Seeds (Pepitas)",
+    cuisineType: "Seeds",
+    description: "Edible seeds of a pumpkin, high in magnesium and zinc.",
+    ingredients: ["Pumpkin Seeds"],
+    nutritionalFacts: {
+      calories: "559 kcal",
+      protein: "30g",
+      carbs: "10g",
+      fat: "49g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo", "High Protein"]
+  },
+  {
+    dishName: "Sunflower Seeds",
+    cuisineType: "Seeds",
+    description: "Seeds harvested from the sunflower plant.",
+    ingredients: ["Sunflower Seeds"],
+    nutritionalFacts: {
+      calories: "584 kcal",
+      protein: "21g",
+      carbs: "20g",
+      fat: "51g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Sesame Seeds",
+    cuisineType: "Seeds",
+    description: "Tiny, oil-rich seeds used globally in baking and cooking.",
+    ingredients: ["Sesame Seeds"],
+    nutritionalFacts: {
+      calories: "573 kcal",
+      protein: "18g",
+      carbs: "23g",
+      fat: "50g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Hemp Seeds",
+    cuisineType: "Seeds",
+    description: "Nutritious seeds with a mild, nutty flavor.",
+    ingredients: ["Hemp Seeds"],
+    nutritionalFacts: {
+      calories: "553 kcal",
+      protein: "31g",
+      carbs: "8.7g",
+      fat: "48g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo", "High Protein"]
+  },
+  {
+    dishName: "Pecans",
+    cuisineType: "Nuts",
+    description: "Rich, buttery nuts native to North America.",
+    ingredients: ["Pecans"],
+    nutritionalFacts: {
+      calories: "691 kcal",
+      protein: "9g",
+      carbs: "14g",
+      fat: "72g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Macadamia Nuts",
+    cuisineType: "Nuts",
+    description: "Rich, creamy nuts with a high fat content.",
+    ingredients: ["Macadamia Nuts"],
+    nutritionalFacts: {
+      calories: "718 kcal",
+      protein: "8g",
+      carbs: "14g",
+      fat: "76g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Brazil Nuts",
+    cuisineType: "Nuts",
+    description: "Large nuts known for their exceptionally high selenium content.",
+    ingredients: ["Brazil Nuts"],
+    nutritionalFacts: {
+      calories: "659 kcal",
+      protein: "14g",
+      carbs: "12g",
+      fat: "67g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Pine Nuts",
+    cuisineType: "Nuts",
+    description: "Edible seeds of pines, commonly used in pesto.",
+    ingredients: ["Pine Nuts"],
+    nutritionalFacts: {
+      calories: "673 kcal",
+      protein: "14g",
+      carbs: "13g",
+      fat: "68g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Hazelnuts",
+    cuisineType: "Nuts",
+    description: "Sweet, earthy nuts often paired with chocolate.",
+    ingredients: ["Hazelnuts"],
+    nutritionalFacts: {
+      calories: "628 kcal",
+      protein: "15g",
+      carbs: "17g",
+      fat: "61g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Avocado (Fresh)",
+    cuisineType: "Fruits",
+    description: "Creamy, nutrient-dense fruit high in healthy fats.",
+    ingredients: ["Avocado"],
+    nutritionalFacts: {
+      calories: "160 kcal",
+      protein: "2g",
+      carbs: "8.5g",
+      fat: "15g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Peach (Fresh)",
+    cuisineType: "Fruits",
+    description: "Juicy stone fruit with a fuzzy skin.",
+    ingredients: ["Peach"],
+    nutritionalFacts: {
+      calories: "39 kcal",
+      protein: "0.9g",
+      carbs: "9.5g",
+      fat: "0.3g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Paleo"]
+  },
+  {
+    dishName: "Plum (Fresh)",
+    cuisineType: "Fruits",
+    description: "Sweet and tart stone fruit.",
+    ingredients: ["Plum"],
+    nutritionalFacts: {
+      calories: "46 kcal",
+      protein: "0.7g",
+      carbs: "11g",
+      fat: "0.3g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Paleo"]
+  },
+  {
+    dishName: "Cherry (Fresh)",
+    cuisineType: "Fruits",
+    description: "Small, round stone fruit, sweet or tart.",
+    ingredients: ["Cherry"],
+    nutritionalFacts: {
+      calories: "50 kcal",
+      protein: "1g",
+      carbs: "12g",
+      fat: "0.3g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Paleo"]
+  },
+  {
+    dishName: "Kiwi (Fresh)",
+    cuisineType: "Fruits",
+    description: "Fuzzy brown fruit with vibrant green flesh.",
+    ingredients: ["Kiwi"],
+    nutritionalFacts: {
+      calories: "61 kcal",
+      protein: "1.1g",
+      carbs: "15g",
+      fat: "0.5g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo"]
+  },
+  {
+    dishName: "Papaya (Fresh)",
+    cuisineType: "Fruits",
+    description: "Tropical fruit with sweet, orange flesh and black seeds.",
+    ingredients: ["Papaya"],
+    nutritionalFacts: {
+      calories: "43 kcal",
+      protein: "0.5g",
+      carbs: "11g",
+      fat: "0.3g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Paleo"]
+  },
+  {
+    dishName: "Pomegranate (Fresh)",
+    cuisineType: "Fruits",
+    description: "Fruit containing hundreds of edible, juicy seeds (arils).",
+    ingredients: ["Pomegranate"],
+    nutritionalFacts: {
+      calories: "83 kcal",
+      protein: "1.7g",
+      carbs: "19g",
+      fat: "1.2g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo"]
+  },
+  {
+    dishName: "Pear (Fresh)",
+    cuisineType: "Fruits",
+    description: "Sweet, bell-shaped fruit with a slightly gritty texture.",
+    ingredients: ["Pear"],
+    nutritionalFacts: {
+      calories: "57 kcal",
+      protein: "0.4g",
+      carbs: "15g",
+      fat: "0.1g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo"]
+  },
+  {
+    dishName: "Grapefruit (Fresh)",
+    cuisineType: "Fruits",
+    description: "Large, tart citrus fruit.",
+    ingredients: ["Grapefruit"],
+    nutritionalFacts: {
+      calories: "42 kcal",
+      protein: "0.8g",
+      carbs: "11g",
+      fat: "0.1g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Paleo"]
+  },
+  {
+    dishName: "Lemon (Fresh)",
+    cuisineType: "Fruits",
+    description: "Sour, yellow citrus fruit.",
+    ingredients: ["Lemon"],
+    nutritionalFacts: {
+      calories: "29 kcal",
+      protein: "1.1g",
+      carbs: "9.3g",
+      fat: "0.3g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Lime (Fresh)",
+    cuisineType: "Fruits",
+    description: "Small, tart green citrus fruit.",
+    ingredients: ["Lime"],
+    nutritionalFacts: {
+      calories: "30 kcal",
+      protein: "0.7g",
+      carbs: "11g",
+      fat: "0.2g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Blackberry (Fresh)",
+    cuisineType: "Fruits",
+    description: "Dark, sweet-tart composite berries.",
+    ingredients: ["Blackberry"],
+    nutritionalFacts: {
+      calories: "43 kcal",
+      protein: "1.4g",
+      carbs: "10g",
+      fat: "0.5g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Raspberry (Fresh)",
+    cuisineType: "Fruits",
+    description: "Delicate, sweet-tart red berries.",
+    ingredients: ["Raspberry"],
+    nutritionalFacts: {
+      calories: "52 kcal",
+      protein: "1.2g",
+      carbs: "12g",
+      fat: "0.7g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Sweet Potato (Raw)",
+    cuisineType: "Vegetables",
+    description: "Starchy, sweet-tasting root vegetable.",
+    ingredients: ["Sweet Potato"],
+    nutritionalFacts: {
+      calories: "86 kcal",
+      protein: "1.6g",
+      carbs: "20g",
+      fat: "0.1g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Paleo"]
+  },
+  {
+    dishName: "Beetroot (Raw)",
+    cuisineType: "Vegetables",
+    description: "Vibrant red root vegetable with an earthy flavor.",
+    ingredients: ["Beetroot"],
+    nutritionalFacts: {
+      calories: "43 kcal",
+      protein: "1.6g",
+      carbs: "10g",
+      fat: "0.2g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Paleo"]
+  },
+  {
+    dishName: "Celery (Raw)",
+    cuisineType: "Vegetables",
+    description: "Crunchy, high-water-content vegetable stalks.",
+    ingredients: ["Celery"],
+    nutritionalFacts: {
+      calories: "16 kcal",
+      protein: "0.7g",
+      carbs: "3g",
+      fat: "0.2g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Asparagus (Raw)",
+    cuisineType: "Vegetables",
+    description: "Tender green spears, often roasted or steamed.",
+    ingredients: ["Asparagus"],
+    nutritionalFacts: {
+      calories: "20 kcal",
+      protein: "2.2g",
+      carbs: "3.9g",
+      fat: "0.1g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Eggplant (Raw)",
+    cuisineType: "Vegetables",
+    description: "Purple, spongy vegetable used in various global dishes.",
+    ingredients: ["Eggplant"],
+    nutritionalFacts: {
+      calories: "25 kcal",
+      protein: "1g",
+      carbs: "6g",
+      fat: "0.2g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Zucchini (Raw)",
+    cuisineType: "Vegetables",
+    description: "Summer squash with a mild flavor and tender texture.",
+    ingredients: ["Zucchini"],
+    nutritionalFacts: {
+      calories: "17 kcal",
+      protein: "1.2g",
+      carbs: "3.1g",
+      fat: "0.3g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Pumpkin (Raw)",
+    cuisineType: "Vegetables",
+    description: "Large, orange winter squash with sweet flesh.",
+    ingredients: ["Pumpkin"],
+    nutritionalFacts: {
+      calories: "26 kcal",
+      protein: "1g",
+      carbs: "6.5g",
+      fat: "0.1g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Paleo"]
+  },
+  {
+    dishName: "Kale (Raw)",
+    cuisineType: "Vegetables",
+    description: "Nutrient-dense, dark leafy green.",
+    ingredients: ["Kale"],
+    nutritionalFacts: {
+      calories: "49 kcal",
+      protein: "4.3g",
+      carbs: "9g",
+      fat: "0.9g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Low Calorie", "Keto", "Paleo"]
+  },
+  {
+    dishName: "Almond Milk (Unsweetened)",
+    cuisineType: "Dairy Alternatives",
+    description: "Plant-based milk made from almonds and water.",
+    ingredients: ["Almonds", "Water"],
+    nutritionalFacts: {
+      calories: "15 kcal",
+      protein: "0.6g",
+      carbs: "0.3g",
+      fat: "1.2g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "Keto", "Paleo", "Low Calorie"]
+  },
+  {
+    dishName: "Oat Milk (Unsweetened)",
+    cuisineType: "Dairy Alternatives",
+    description: "Creamy plant-based milk made from whole oats.",
+    ingredients: ["Oats", "Water"],
+    nutritionalFacts: {
+      calories: "47 kcal",
+      protein: "1.4g",
+      carbs: "6.8g",
+      fat: "1.5g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free"]
+  },
+  {
+    dishName: "Soy Milk (Unsweetened)",
+    cuisineType: "Dairy Alternatives",
+    description: "High-protein plant-based milk made from soybeans.",
+    ingredients: ["Soybeans", "Water"],
+    nutritionalFacts: {
+      calories: "33 kcal",
+      protein: "3.3g",
+      carbs: "1.8g",
+      fat: "1.5g"
+    },
+    dietaryTags: ["Vegan", "Vegetarian", "Gluten-Free", "High Protein"]
   }
 ];
