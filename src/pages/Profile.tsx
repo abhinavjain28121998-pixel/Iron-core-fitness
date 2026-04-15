@@ -104,8 +104,7 @@ export default function Profile({ user }: { user: User | null }) {
               alt={user.displayName || 'User'} 
               className="w-32 h-32 rounded-3xl object-cover border-4 border-red-600 shadow-2xl shadow-red-600/20"
               referrerPolicy="no-referrer"
-              loading="lazy"
-              decoding="async"
+              fetchPriority="high"
               width="128"
               height="128"
             />

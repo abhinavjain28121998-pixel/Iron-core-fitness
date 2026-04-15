@@ -72,6 +72,10 @@ export function ExerciseModal({
                 src={displayImage} 
                 alt={displayAltText} 
                 className="w-full h-full object-cover opacity-60"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="400"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent"></div>
             </>

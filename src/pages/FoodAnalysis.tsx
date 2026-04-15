@@ -56,6 +56,9 @@ export default function FoodAnalysis() {
             alt="Beautifully plated food" 
             className="rounded-full aspect-[3/4] object-cover w-full max-w-md mx-auto shadow-2xl"
             referrerPolicy="no-referrer"
+            fetchPriority="high"
+            width="800"
+            height="1066"
           />
           
           {/* Floating UI Elements */}
