@@ -108,18 +108,18 @@ export default function Blog() {
           }}
         />
       )}
-      <div className="max-w-7xl mx-auto px-6">
-        <header className="mb-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-display font-black uppercase italic tracking-tighter mb-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <header className="mb-12 md:mb-20 text-center">
+          <h1 className="text-3xl md:text-6xl font-display font-black uppercase italic tracking-tighter mb-4 md:mb-6">
             Fitness <span className="text-red-600">Tips</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
             Stay informed with the latest tips on training, nutrition, and recovery from our team of experts.
           </p>
         </header>
 
         {/* Search & Featured */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 mb-12 md:mb-20">
           <div className="relative w-full md:w-96">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
             <input 
@@ -127,14 +127,14 @@ export default function Blog() {
               placeholder="Search articles..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-zinc-900 border border-white/10 rounded-xl pl-12 pr-4 py-4 text-sm focus:outline-none focus:border-red-600 transition-colors"
+              className="w-full bg-zinc-900 border border-white/10 rounded-xl pl-12 pr-4 py-3 md:py-4 text-sm focus:outline-none focus:border-red-600 transition-colors"
             />
           </div>
-          <div className="flex items-center gap-6">
-            <span className="text-xs font-black uppercase tracking-widest text-gray-500">Trending:</span>
-            <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-6 w-full md:w-auto">
+            <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-gray-500">Trending:</span>
+            <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4">
               {['Fat Loss', 'Muscle Gain', 'Recovery'].map(tag => (
-                <button key={tag} className="text-xs font-bold uppercase tracking-widest text-red-600 hover:text-white transition-colors">
+                <button key={tag} className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-red-600 hover:text-white transition-colors">
                   #{tag}
                 </button>
               ))}
@@ -143,7 +143,7 @@ export default function Blog() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {filteredPosts.map((post, i) => (
             <motion.article 
               key={post.id}

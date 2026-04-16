@@ -156,18 +156,18 @@ export default function DietPlans() {
           }))
         }}
       />
-      <div className="max-w-7xl mx-auto px-6">
-        <header className="mb-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-display font-black uppercase italic tracking-tighter mb-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <header className="mb-12 md:mb-16 text-center">
+          <h1 className="text-3xl md:text-6xl font-display font-black uppercase italic tracking-tighter mb-4 md:mb-6">
             Muscle Gain & <span className="text-red-600">Fat Loss Diets</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-8">
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-6 md:mb-8">
             Fuel your <strong>body transformation</strong> with expert-curated <strong>macronutrient-focused meal plans</strong>. Whether you're in a <strong>caloric deficit</strong> for fat loss or a surplus for <strong>muscle gain</strong>, we have the right fuel for your fire.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
             <Link 
               to="/workouts" 
-              className="inline-flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-widest transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white px-6 py-3 md:py-4 rounded-xl text-xs md:text-sm font-bold uppercase tracking-widest transition-colors w-full sm:w-auto"
             >
               <Zap className="w-4 h-4 text-red-600" />
               View Workout Plans
@@ -178,7 +178,7 @@ export default function DietPlans() {
         <MacroCalculator />
 
         {/* Filters & Search */}
-        <div className="bg-zinc-900/40 backdrop-blur-xl border border-white/5 p-4 md:p-6 rounded-[2rem] mb-12 md:mb-16 shadow-2xl">
+        <div className="bg-zinc-900/40 backdrop-blur-xl border border-white/5 p-4 md:p-6 rounded-[2rem] mb-10 md:mb-16 shadow-2xl">
           <div className="flex flex-col lg:flex-row items-stretch gap-4">
             <div className="relative flex-1 group">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-red-500 transition-colors" />
@@ -187,7 +187,7 @@ export default function DietPlans() {
                 placeholder="Search diet plans by title..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-black/50 border border-white/10 rounded-2xl pl-12 pr-4 py-4 text-sm focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/20 transition-all placeholder:text-zinc-600"
+                className="w-full bg-black/50 border border-white/10 rounded-2xl pl-12 pr-4 py-3 md:py-4 text-sm focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/20 transition-all placeholder:text-zinc-600"
               />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -196,7 +196,7 @@ export default function DietPlans() {
                 <select 
                   value={filter.goal}
                   onChange={(e) => setFilter({ ...filter, goal: e.target.value })}
-                  className="w-full bg-black/50 border border-white/10 rounded-2xl pl-10 pr-4 py-4 text-xs font-black uppercase tracking-widest focus:outline-none focus:border-red-600/50 transition-all appearance-none cursor-pointer hover:bg-black"
+                  className="w-full bg-black/50 border border-white/10 rounded-2xl pl-10 pr-8 py-3 md:py-4 text-[10px] md:text-xs font-black uppercase tracking-widest focus:outline-none focus:border-red-600/50 transition-all appearance-none cursor-pointer hover:bg-black"
                 >
                   {goals.map(g => <option key={g.id} value={g.id}>{g.label}</option>)}
                 </select>
@@ -207,7 +207,7 @@ export default function DietPlans() {
                 <select 
                   value={filter.type}
                   onChange={(e) => setFilter({ ...filter, type: e.target.value })}
-                  className="w-full bg-black/50 border border-white/10 rounded-2xl pl-10 pr-4 py-4 text-xs font-black uppercase tracking-widest focus:outline-none focus:border-red-600/50 transition-all appearance-none cursor-pointer hover:bg-black"
+                  className="w-full bg-black/50 border border-white/10 rounded-2xl pl-10 pr-8 py-3 md:py-4 text-[10px] md:text-xs font-black uppercase tracking-widest focus:outline-none focus:border-red-600/50 transition-all appearance-none cursor-pointer hover:bg-black"
                 >
                   {types.map(t => <option key={t.id} value={t.id}>{t.label}</option>)}
                 </select>
@@ -218,7 +218,7 @@ export default function DietPlans() {
         </div>
 
         {/* Diet Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative min-h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative min-h-[400px]">
             {isSearching ? (
               Array.from({ length: 6 }).map((_, i) => (
                 <div key={`skeleton-${i}`} className="bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden animate-pulse">

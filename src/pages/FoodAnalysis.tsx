@@ -18,27 +18,27 @@ export default function FoodAnalysis() {
         ]}
       />
       {/* Hero Section */}
-      <section className="px-8 py-12 md:py-24 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center overflow-hidden">
+      <section className="px-6 py-12 md:py-24 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-red-600/20 text-red-500 text-xs font-semibold uppercase tracking-widest mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-red-600/20 text-red-500 text-[10px] md:text-xs font-semibold uppercase tracking-widest mb-6 md:mb-8">
             <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
             New Feature
           </div>
-          <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight mb-8">
+          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight mb-6 md:mb-8">
             Taste the <br/>
             <span className="italic text-red-500">knowledge.</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-400 max-w-md mb-10 leading-relaxed font-light">
+          <p className="text-base md:text-xl text-gray-400 max-w-md mb-8 md:mb-10 leading-relaxed font-light">
             Build your plate by adding basic ingredients like paneer, bread, and ghee. Adjust portions for precise nutritional tracking.
           </p>
           <div className="flex gap-4">
             <button 
               onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-red-600 text-white rounded-full px-6 py-3 hover:bg-red-700 transition-all inline-flex items-center gap-2 font-bold uppercase tracking-widest text-sm"
+              className="w-full sm:w-auto bg-red-600 text-white rounded-full px-6 py-4 md:py-3 hover:bg-red-700 transition-all inline-flex items-center justify-center gap-2 font-bold uppercase tracking-widest text-xs md:text-sm"
             >
               Try the Demo <ArrowRight className="w-4 h-4" />
             </button>
@@ -99,22 +99,22 @@ export default function FoodAnalysis() {
       </section>
 
       {/* Demo Section */}
-      <section id="demo" className="py-24 bg-zinc-950 border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl mb-4">Meal Builder</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Add multiple items and adjust weights to calculate your meal's total nutritional profile.</p>
+      <section id="demo" className="py-16 md:py-24 bg-zinc-950 border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="font-serif text-3xl md:text-5xl mb-3 md:mb-4">Meal Builder</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">Add multiple items and adjust weights to calculate your meal's total nutritional profile.</p>
           </div>
           <DemoSection />
         </div>
       </section>
 
       {/* Briefing Section */}
-      <section id="briefing" className="py-24 bg-black">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl mb-4">Technical Briefing</h2>
-            <p className="text-gray-400">Product development overview and implementation details.</p>
+      <section id="briefing" className="py-16 md:py-24 bg-black">
+        <div className="max-w-4xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="font-serif text-3xl md:text-5xl mb-3 md:mb-4">Technical Briefing</h2>
+            <p className="text-gray-400 text-sm md:text-base">Product development overview and implementation details.</p>
           </div>
           <BriefingSection />
         </div>

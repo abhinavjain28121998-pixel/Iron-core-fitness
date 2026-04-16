@@ -94,28 +94,28 @@ export default function Profile({ user }: { user: User | null }) {
         description="Manage your personalized fitness profile, track your progress, and update your goals."
         urlPath="/profile" 
       />
-      <div className="max-w-5xl mx-auto px-6">
-        <header className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
-          <div className="flex items-center gap-8">
+      <div className="max-w-5xl mx-auto px-4 md:px-6">
+        <header className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 md:gap-8 mb-12 md:mb-16 text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <img 
               src={user.photoURL || `https://picsum.photos/seed/${user.uid}/200/200`} 
               srcSet={`${user.photoURL || `https://picsum.photos/seed/${user.uid}/100/100`} 100w, ${user.photoURL || `https://picsum.photos/seed/${user.uid}/200/200`} 200w`}
               sizes="128px"
               alt={user.displayName || 'User'} 
-              className="w-32 h-32 rounded-3xl object-cover border-4 border-red-600 shadow-2xl shadow-red-600/20"
+              className="w-24 h-24 md:w-32 md:h-32 rounded-3xl object-cover border-4 border-red-600 shadow-2xl shadow-red-600/20"
               referrerPolicy="no-referrer"
               fetchPriority="high"
               width="128"
               height="128"
             />
             <div>
-              <h1 className="text-5xl font-black uppercase italic tracking-tighter mb-2">{user.displayName}</h1>
-              <p className="text-gray-500 font-bold uppercase tracking-widest text-sm">{user.email}</p>
+              <h1 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-2">{user.displayName}</h1>
+              <p className="text-gray-500 font-bold uppercase tracking-widest text-xs md:text-sm">{user.email}</p>
             </div>
           </div>
           <button 
             onClick={logout}
-            className="bg-white/5 hover:bg-red-600/20 text-gray-400 hover:text-red-500 px-6 py-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all flex items-center gap-2 border border-white/10"
+            className="w-full md:w-auto justify-center bg-white/5 hover:bg-red-600/20 text-gray-400 hover:text-red-500 px-6 py-4 md:py-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all flex items-center gap-2 border border-white/10"
           >
             <LogOut className="w-4 h-4" /> Sign Out
           </button>

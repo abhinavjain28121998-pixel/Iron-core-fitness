@@ -17,4 +17,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://ais-pre-4moucafu2hzsflyibb74ox-756170678377.asia-southeast1.run.app/sitemap.xml
+Sitemap: https://iron-core-fitness-five.vercel.app/sitemap.xml

@@ -77,24 +77,24 @@ export default function DemoSection() {
   }, [addedItems]);
 
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
       {/* Left Column: Meal Builder */}
-      <div className="flex flex-col gap-8">
-        <div className="bg-zinc-900 border border-white/10 rounded-3xl p-6 shadow-xl">
-          <div className="flex items-center justify-between mb-5">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center text-red-500">
-                <Plus className="w-5 h-5" />
+      <div className="flex flex-col gap-6 md:gap-8">
+        <div className="bg-zinc-900 border border-white/10 rounded-3xl p-4 md:p-6 shadow-xl">
+          <div className="flex items-center justify-between mb-4 md:mb-5">
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600/10 flex items-center justify-center text-red-500">
+                <Plus className="w-4 h-4 md:w-5 md:h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-white">Meal Builder</h3>
-                <p className="text-xs text-gray-400">Add multiple items to calculate total nutrition</p>
+                <h3 className="font-bold text-white text-sm md:text-base">Meal Builder</h3>
+                <p className="text-[10px] md:text-xs text-gray-400">Add multiple items to calculate total nutrition</p>
               </div>
             </div>
             {addedItems.length > 0 && (
               <button 
                 onClick={() => setAddedItems([])}
-                className="text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-red-500 transition-colors px-3 py-1.5 rounded-full hover:bg-red-500/10"
+                className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-red-500 transition-colors px-2 md:px-3 py-1 md:py-1.5 rounded-full hover:bg-red-500/10"
               >
                 Clear Plate
               </button>
@@ -129,9 +129,9 @@ export default function DemoSection() {
                 setShowSuggestions(true);
               }}
               onFocus={() => setShowSuggestions(true)}
-              className="w-full bg-black border border-white/10 rounded-2xl pl-12 pr-4 py-3 text-white focus:outline-none focus:border-red-600/50 transition-all placeholder:text-zinc-700"
+              className="w-full bg-black border border-white/10 rounded-2xl pl-10 md:pl-12 pr-4 py-3 md:py-3 text-sm md:text-base text-white focus:outline-none focus:border-red-600/50 transition-all placeholder:text-zinc-700"
             />
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-700" />
+            <Search className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-zinc-700" />
             
             <AnimatePresence>
               {showSuggestions && (filteredFoods.length > 0 || searchQuery.trim() !== '') && (
@@ -205,37 +205,37 @@ export default function DemoSection() {
                     className="bg-black/40 border border-white/5 rounded-2xl p-3 flex items-center justify-between gap-3"
                   >
                     <div className="flex-1 min-w-0">
-                      <p className="font-bold text-white text-sm truncate">{item.food.dishName}</p>
-                      <p className="text-[9px] text-zinc-500 uppercase tracking-widest">{item.food.cuisineType}</p>
+                      <p className="font-bold text-white text-xs md:text-sm truncate">{item.food.dishName}</p>
+                      <p className="text-[8px] md:text-[9px] text-zinc-500 uppercase tracking-widest">{item.food.cuisineType}</p>
                     </div>
                     
-                    <div className="flex items-center gap-2 bg-zinc-900 rounded-xl px-2 py-1.5 border border-white/5">
+                    <div className="flex items-center gap-1 md:gap-2 bg-zinc-900 rounded-xl px-1.5 md:px-2 py-1 md:py-1.5 border border-white/5 shrink-0">
                       <button 
                         onClick={() => updateWeight(item.id, item.weight - 10)}
-                        className="text-zinc-500 hover:text-white transition-colors"
+                        className="text-zinc-500 hover:text-white transition-colors p-1"
                       >
-                        <Minus className="w-4 h-4" />
+                        <Minus className="w-3 h-3 md:w-4 md:h-4" />
                       </button>
-                      <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-0.5 md:gap-1">
                         <input 
                           type="number" 
                           value={item.weight}
                           onChange={(e) => updateWeight(item.id, parseInt(e.target.value) || 0)}
-                          className="w-12 bg-transparent text-center text-white font-bold text-sm focus:outline-none"
+                          className="w-8 md:w-12 bg-transparent text-center text-white font-bold text-xs md:text-sm focus:outline-none"
                         />
-                        <span className="text-xs text-zinc-600 font-bold">g</span>
+                        <span className="text-[10px] md:text-xs text-zinc-600 font-bold">g</span>
                       </div>
                       <button 
                         onClick={() => updateWeight(item.id, item.weight + 10)}
-                        className="text-zinc-500 hover:text-white transition-colors"
+                        className="text-zinc-500 hover:text-white transition-colors p-1"
                       >
-                        <Plus className="w-4 h-4" />
+                        <Plus className="w-3 h-3 md:w-4 md:h-4" />
                       </button>
                     </div>
 
                     <button 
                       onClick={() => removeItem(item.id)}
-                      className="p-2 text-zinc-600 hover:text-red-500 transition-colors"
+                      className="p-1.5 md:p-2 text-zinc-600 hover:text-red-500 transition-colors shrink-0"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
@@ -259,27 +259,27 @@ export default function DemoSection() {
 
       {/* Right Column: Meal Summary */}
       <div className="sticky top-8">
-        <div className="bg-zinc-900 border border-white/10 rounded-3xl p-6 shadow-xl overflow-hidden relative">
+        <div className="bg-zinc-900 border border-white/10 rounded-3xl p-4 md:p-6 shadow-xl overflow-hidden relative">
           {/* Background Accent */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/5 rounded-full -mr-16 -mt-16 blur-3xl" />
           
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center text-red-500">
-              <PieChart className="w-5 h-5" />
+          <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600/10 flex items-center justify-center text-red-500">
+              <PieChart className="w-4 h-4 md:w-5 md:h-5" />
             </div>
-            <h3 className="font-bold text-white">Meal Summary</h3>
+            <h3 className="font-bold text-white text-sm md:text-base">Meal Summary</h3>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div className="bg-black/40 border border-white/5 p-4 rounded-2xl text-center">
-              <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Total Calories</p>
-              <p className="font-serif text-3xl font-semibold text-white">{Math.round(totals.calories)}</p>
-              <p className="text-[9px] text-zinc-600 mt-1 uppercase font-bold">kcal</p>
+          <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-6">
+            <div className="bg-black/40 border border-white/5 p-3 md:p-4 rounded-2xl text-center">
+              <p className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Total Calories</p>
+              <p className="font-serif text-2xl md:text-3xl font-semibold text-white">{Math.round(totals.calories)}</p>
+              <p className="text-[8px] md:text-[9px] text-zinc-600 mt-1 uppercase font-bold">kcal</p>
             </div>
-            <div className="bg-black/40 border border-white/5 p-4 rounded-2xl text-center">
-              <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Total Protein</p>
-              <p className="font-serif text-3xl font-semibold text-red-500">{totals.protein.toFixed(1)}</p>
-              <p className="text-[9px] text-zinc-600 mt-1 uppercase font-bold">grams</p>
+            <div className="bg-black/40 border border-white/5 p-3 md:p-4 rounded-2xl text-center">
+              <p className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Total Protein</p>
+              <p className="font-serif text-2xl md:text-3xl font-semibold text-red-500">{totals.protein.toFixed(1)}</p>
+              <p className="text-[8px] md:text-[9px] text-zinc-600 mt-1 uppercase font-bold">grams</p>
             </div>
           </div>
 

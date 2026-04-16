@@ -261,38 +261,38 @@ export default function MuscleGroups() {
           }))
         }}
       />
-      <div className="max-w-7xl mx-auto px-6">
-        <header className="mb-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-display font-black uppercase italic tracking-tighter mb-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <header className="mb-12 md:mb-16 text-center">
+          <h1 className="text-3xl md:text-6xl font-display font-black uppercase italic tracking-tighter mb-4 md:mb-6">
             Muscle Group <span className="text-red-600">Exercises</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
             Find targeted <strong>hypertrophy exercises</strong> and <strong>strength training routines</strong> for every major muscle group. Build your perfect physique with precision and <strong>progressive overload</strong>.
           </p>
         </header>
 
         {/* Search Bar */}
-        <div className="bg-zinc-900/40 backdrop-blur-xl border border-white/5 p-4 md:p-6 rounded-[2rem] mb-12 md:mb-16 shadow-2xl">
+        <div className="bg-zinc-900/40 backdrop-blur-xl border border-white/5 p-4 md:p-6 rounded-[2rem] mb-10 md:mb-16 shadow-2xl">
           <div className="relative max-w-2xl mx-auto group">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-red-500 transition-colors" />
             <input 
               type="text" 
-              placeholder="Search muscle groups (e.g., Chest, Back, Quads)..."
+              placeholder="Search muscle groups..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-black/50 border border-white/10 rounded-2xl pl-12 pr-4 py-4 text-sm focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/20 transition-all placeholder:text-zinc-600"
+              className="w-full bg-black/50 border border-white/10 rounded-2xl pl-12 pr-4 py-3 md:py-4 text-sm focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/20 transition-all placeholder:text-zinc-600"
             />
           </div>
         </div>
 
         {/* Popular Muscle Groups (Only show if no search filter is applied) */}
         {!search && (
-          <div className="mb-20">
-            <h2 className="text-2xl font-black uppercase italic mb-10 flex items-center gap-3">
-              <Flame className="w-6 h-6 text-red-600" />
+          <div className="mb-12 md:mb-20">
+            <h2 className="text-xl md:text-2xl font-black uppercase italic mb-6 md:mb-10 flex items-center gap-3">
+              <Flame className="w-5 h-5 md:w-6 md:h-6 text-red-600" />
               Popular Muscle Groups
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {popularGroups.slice(0, 4).map((group, index) => {
                 const Icon = group.icon;
                 return (
@@ -303,7 +303,7 @@ export default function MuscleGroups() {
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     onClick={() => handleSelectGroup(group)}
-                    className="bg-zinc-900/80 backdrop-blur-sm border border-white/5 rounded-3xl p-8 cursor-pointer hover:border-red-600/30 transition-all group relative overflow-hidden shadow-xl hover:-translate-y-1"
+                    className="bg-zinc-900/80 backdrop-blur-sm border border-white/5 rounded-3xl p-6 md:p-8 cursor-pointer hover:border-red-600/30 transition-all group relative overflow-hidden shadow-xl hover:-translate-y-1"
                   >
                     <img 
                       src={group.image} 
@@ -318,11 +318,11 @@ export default function MuscleGroups() {
                       height="200"
                     />
                     <div className="relative z-10">
-                      <div className="w-14 h-14 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:rotate-12 transition-all duration-500">
-                        <Icon className="w-7 h-7 text-red-600 group-hover:text-white transition-colors" />
+                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-red-600/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-red-600 group-hover:rotate-12 transition-all duration-500">
+                        <Icon className="w-6 h-6 md:w-7 md:h-7 text-red-600 group-hover:text-white transition-colors" />
                       </div>
-                      <h3 className="text-xl font-black uppercase italic mb-3 tracking-tight">{group.title}</h3>
-                      <p className="text-zinc-500 text-sm line-clamp-2 font-medium leading-relaxed">{group.description}</p>
+                      <h3 className="text-lg md:text-xl font-black uppercase italic mb-2 md:mb-3 tracking-tight">{group.title}</h3>
+                      <p className="text-zinc-500 text-xs md:text-sm line-clamp-2 font-medium leading-relaxed">{group.description}</p>
                     </div>
                   </motion.div>
                 );
@@ -333,10 +333,10 @@ export default function MuscleGroups() {
 
         {/* All Muscle Groups Grid */}
         <div className="min-h-[400px]">
-          <h2 className="text-2xl font-black uppercase italic mb-10">
+          <h2 className="text-xl md:text-2xl font-black uppercase italic mb-6 md:mb-10">
             {search ? 'Search Results' : 'All Muscle Groups'}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {isSearching ? (
                 Array.from({ length: 6 }).map((_, i) => (
                   <div key={`skeleton-${i}`} className="bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden animate-pulse">

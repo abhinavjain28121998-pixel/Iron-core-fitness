@@ -10,7 +10,7 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-export const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://ais-pre-4moucafu2hzsflyibb74ox-756170678377.asia-southeast1.run.app';
+export const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://iron-core-fitness-five.vercel.app';
 
 export const SEO: React.FC<SEOProps> = ({ 
   title = "Iron Core: Elite Gym Workout & Macronutrient Diet Plans", 
@@ -21,10 +21,6 @@ export const SEO: React.FC<SEOProps> = ({
   noindex = false
 }) => {
   const fullUrl = `${baseUrl}${urlPath}`;
-
-  // Automatically noindex if the site is loaded on the Vercel domain to prevent duplicate content
-  const isVercel = typeof window !== 'undefined' && window.location.hostname.includes('vercel.app');
-  const shouldNoIndex = noindex || isVercel;
 
   const breadcrumbSchema = breadcrumbs ? {
     "@context": "https://schema.org",
@@ -42,7 +38,7 @@ export const SEO: React.FC<SEOProps> = ({
       <title>{title.includes('Iron Core') ? title : `${title} | Iron Core`}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={fullUrl} />
-      <meta name="robots" content={shouldNoIndex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />

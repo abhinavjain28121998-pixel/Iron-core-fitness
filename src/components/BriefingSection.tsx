@@ -75,15 +75,17 @@ export default function BriefingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="bg-zinc-900 border border-white/10 rounded-3xl p-8 md:p-10 shadow-xl"
+          className="bg-zinc-900 border border-white/10 rounded-3xl p-6 md:p-10 shadow-xl"
         >
-          <div className="flex items-start gap-6">
-            <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-red-500 shrink-0 mt-1">
+          <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-zinc-800 flex items-center justify-center text-red-500 shrink-0 mt-1 [&>svg]:w-5 [&>svg]:h-5 md:[&>svg]:w-6 md:[&>svg]:h-6">
               {section.icon}
             </div>
             <div>
-              <h3 className="font-serif text-2xl font-semibold mb-4 text-white">{section.title}</h3>
-              {section.content}
+              <h3 className="font-serif text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-white">{section.title}</h3>
+              <div className="text-sm md:text-base">
+                {section.content}
+              </div>
             </div>
           </div>
         </motion.div>
