@@ -22,6 +22,10 @@ export const SEO: React.FC<SEOProps> = ({
 }) => {
   const fullUrl = `${baseUrl}${urlPath}`;
 
+  // Automatically noindex if the site is loaded on the Vercel domain to prevent duplicate content
+  const isVercel = typeof window !== 'undefined' && window.location.hostname.includes('vercel.app');
+  const shouldNoIndex = noindex || isVercel;
+
   const breadcrumbSchema = breadcrumbs ? {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -38,7 +42,7 @@ export const SEO: React.FC<SEOProps> = ({
       <title>{title.includes('Iron Core') ? title : `${title} | Iron Core`}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={fullUrl} />
-      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="robots" content={shouldNoIndex ? "noindex, nofollow" : "index, follow"} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
