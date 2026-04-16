@@ -10,7 +10,7 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-export const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://iron-core-fitness-five.vercel.app';
+export const baseUrl = 'https://iron-core-fitness-five.vercel.app';
 
 export const SEO: React.FC<SEOProps> = ({ 
   title = "Iron Core: Elite Gym Workout & Macronutrient Diet Plans", 
